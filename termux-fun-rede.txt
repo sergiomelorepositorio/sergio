@@ -1,0 +1,33 @@
+termux-fun-rede.txt — comandos rápidos e divertidos
+
+Instalações úteis:
+- pkg update && pkg upgrade
+- pkg install termux-api nano neofetch toilet figlet cowsay cmatrix sl
+
+Abrir arquivos/URLs com apps do Android:
+- termux-open ~/storage/shared/Download/revista.pdf
+- termux-open-url https://github.com
+
+Notificações e toasts:
+- termux-notification --title "Bom dia!" --content "Hora do Termux relax"
+- termux-toast "Relax: tomar um chá ☕"
+
+Efeitos visuais e diversão:
+- neofetch
+- figlet "TERMUX" | lolcat
+- cowsay "Oi, Sergio!"
+- cmatrix
+
+Configurar fullscreen e teclado extra:
+mkdir -p ~/.termux
+# editar ~/.termux/termux.properties e adicionar:
+# fullscreen=true
+# extra-keys = [['ESC','/','-','HOME','UP','END'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT']]
+termux-reload-settings
+
+Evitar suspensão durante scripts:
+- termux-wake-lock  (quando iniciar)
+- termux-wake-unlock (ao terminar)
+
+Abrir configurações Wi‑Fi (manual):
+- am start -a android.settings.WIFI_SETTINGS
